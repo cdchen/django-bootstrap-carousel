@@ -1,4 +1,4 @@
-{% with carousel_id="carousel-{{ carousel.id }}" items=carousel.item.all %}
+{% with items=carousel.items.all %}
 <div id="{{ carousel_id }}" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         {% for item in items %}
