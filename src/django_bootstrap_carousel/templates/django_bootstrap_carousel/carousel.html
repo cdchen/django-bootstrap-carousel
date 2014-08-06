@@ -1,0 +1,27 @@
+{% with carousel_id="carousel-{{ carousel.id }}" items=carousel.item.all %}
+<div id="{{ carousel_id }}" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        {% for item in items %}
+        <li data-target="#{{ carousel_id }}" data-slide-to="{{ forloop.current }}"></li>
+        {% endfor %}
+    </ol>
+
+    <div class="carousel-inner">
+        {% for item in items %}
+        <div class="item">
+            {% if item.image %}<img src="{{ item.image.url }}" alt="{{ item.display_title }}">{% endif %}
+            <div class="carousel-caption">
+                {% if item.display_title %}<h3>{{ item.display_title }}</h3>{% endif %}
+                {{ item.display_content|safe }}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <a class="left carousel-control" href="#{{ carousel_id }}" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#{{ carousel_id }}" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+{% endwith %}

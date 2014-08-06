@@ -1,0 +1,12 @@
+# -*- coding: utf-8 -*-
+
+from lettuce import *
+
+
+@step('Step (\d+)')
+def scenario_step(step, step_id):
+    print "Step ID: %d" % step_id
+
+
+# End of file.
+
