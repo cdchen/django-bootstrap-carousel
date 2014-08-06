@@ -41,6 +41,7 @@ class CarouselItem(models.Model):
     image = models.ImageField(
         null=True,
         blank=True,
+        upload_to='carousel/',
     )
 
     weight = models.IntegerField(
