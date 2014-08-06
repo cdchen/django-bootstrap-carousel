@@ -5,13 +5,6 @@
 #
 #
 
-try:
-    import pkg_resources
-    __version__ = pkg_resources.get_distribution('django_bootstrap_carousel').version
-except:
-    __version__ = '0.1'
+version = '0.1.dev'
 
-
-
-# End of file.
 
