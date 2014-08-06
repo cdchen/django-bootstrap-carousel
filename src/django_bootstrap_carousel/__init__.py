@@ -5,6 +5,6 @@
 #
 #
 
-version = '0.2.dev'
+version = '0.1.1'
 
 
