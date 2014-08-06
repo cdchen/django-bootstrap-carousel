@@ -6,6 +6,7 @@
 
 .pydevproject
 .project
+/.idea
 
 bin
 lib
