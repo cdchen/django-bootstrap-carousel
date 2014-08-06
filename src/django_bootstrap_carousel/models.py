@@ -5,7 +5,6 @@ from django.db import models
 class Carousel(models.Model):
     name = models.CharField(
         max_length=64,
-        default=True,
         db_index=True,
         unique=True,
     )
