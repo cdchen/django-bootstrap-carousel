@@ -38,7 +38,7 @@ setup(
     author='cdchen',
     author_email='cdchen@nicestudio.com.tw',
     url='https://github.com/cdchen/django-bootstrap-carousel',
-    download_url='https://github.com/cdchen/django-bootstrap-carousel',
+    download_url='https://github.com/cdchen/django-bootstrap-carousel/tarball/%s' % version,
     license='MIT License',
     packages=find_packages('src', exclude=['docs', 'tests']),
     package_dir={
