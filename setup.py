@@ -13,6 +13,9 @@ version = django_bootstrap_carousel.version
 
 install_requires = [
     'django',
+    'south',
+    'django_nose',
+    'pillow',
 ]
 
 setup_requires = [
