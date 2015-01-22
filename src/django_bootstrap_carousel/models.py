@@ -37,6 +37,11 @@ class CarouselItem(models.Model):
         blank=True,
     )
 
+    url = models.URLField(
+        null=True,
+        blank=True,
+    )
+
     image = models.ImageField(
         null=True,
         blank=True,

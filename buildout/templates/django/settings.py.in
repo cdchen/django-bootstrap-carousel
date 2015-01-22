@@ -1,4 +1,5 @@
 # Django settings for nicedeployer_testsrv project.
+import django
 
 STAGE = '${django-settings:stage}'
 DEBUG = STAGE != 'production'
@@ -126,10 +127,17 @@ INSTALLED_APPS = [
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 
-    'south',
     'django_nose',
-    'lettuce.django',
+    'django_bootstrap_carousel',
 ]
+
+
+if django.VERSION[0] == 1 and django.VERSION[1] < 7:
+    INSTALLED_APPS.append('south')
+    SOUTH_MIGRATION_MODULES = {
+        'django_bootstrap_carousel': 'django_bootstrap_carousel.south_migrations'
+    }
+
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
