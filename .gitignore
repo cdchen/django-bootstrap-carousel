@@ -7,6 +7,7 @@
 .pydevproject
 .project
 /.idea
+/.installed.cfg
 
 bin
 lib
