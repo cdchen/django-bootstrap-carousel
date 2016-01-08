@@ -19,4 +19,4 @@ eggs
 parts
 buildout.cfg
 
-
+/.installed.cfg

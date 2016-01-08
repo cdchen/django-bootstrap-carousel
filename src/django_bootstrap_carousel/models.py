@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
-##
-## {{ project }}
-##
-##
-## Copyrights reserved, niceStudio.
-##
-##
 from django.db import models
 
 
+class Carousel(models.Model):
+    pass
 
-# End of file.
+
+class CarouselElement(models.Model):
+
+    carousel = models.ForeignKey(
+        Carousel,
+        related_name='elements',
+    )
+
